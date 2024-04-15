@@ -2,6 +2,8 @@ import streamlit as st
 import requests
 import base64
 
+st.set_page_config(page_title="Forge Image", page_icon="🖼️")
+
 # Function to generate image based on prompt
 def generate_image(prompt_input):
     invoke_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/stable-diffusion-xl"

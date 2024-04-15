@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 
+st.set_page_config(page_title="Forge Chat", page_icon="💬")
+
 st.link_button("Dowload Dummy Dataset", "https://mega.nz/file/6stVECaI#j4ylTiVV6KflAbs60RKmDPxtLFtnO_HNLYnh09_5WN4https://mega.nz/file/6stVECaI#j4ylTiVV6KflAbs60RKmDPxtLFtnO_HNLYnh09_5WN4")
 DOCS_DIR = os.path.abspath("./uploaded_docs")
 if not os.path.exists(DOCS_DIR):
@@ -71,7 +73,7 @@ else:
 # Component #4 - LLM Response Generation and Chat
 
 
-st.subheader("Chat with your AI Assistant, Juris AI!")
+st.subheader("Chat with your AI Assistant, Forge AI!")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -84,7 +86,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 prompt_template = ChatPromptTemplate.from_messages(
-    [("system", "You are a helpful AI assistant named Juris AI. You will reply to questions only based on the context that you are provided. If something is out of context, you will refrain from replying and politely decline to respond to the user."), ("user", "{input}")]
+    [("system", "You are a helpful AI assistant named Forge AI. You will reply to questions only based on the context that you are provided. If something is out of context, you will refrain from replying and politely decline to respond to the user."), ("user", "{input}")]
 )
 user_input = st.chat_input("Ask a question about document")
 llm = ChatNVIDIA(model="mixtral_8x7b")

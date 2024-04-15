@@ -4,7 +4,7 @@ import time
 from io import BytesIO
 from streamlit_extras.switch_page_button import switch_page 
 
-st.set_page_config(page_title="Generated Songs", page_icon="🎙️",initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Forge Songs", page_icon="🎙️")
 
 col1,col2=st.columns([8,1])
 with col1:
