@@ -7,6 +7,7 @@ show_pages(
         [
             Page("pages/home.py", "🏠 Home"),
             Page("pages/chatbot.py","💬 Forge Chat"),
+            Page("pages/image.py","🎙️ image"),
             Page("pages/musicgen.py","🎙️ Generate Songs")  
         ]
     )
