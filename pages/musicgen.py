@@ -5,7 +5,8 @@ from io import BytesIO
 from streamlit_extras.switch_page_button import switch_page 
 
 st.set_page_config(page_title="Forge Songs", page_icon="🎙️")
-
+with open("designing.css") as source_des:
+    st.markdown(f'<style>{source_des.read()}</style>', unsafe_allow_html=True)
 col1,col2=st.columns([8,1])
 with col1:
     st.title("Generate Songs")

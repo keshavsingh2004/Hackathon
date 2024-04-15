@@ -3,13 +3,15 @@ import requests
 import base64
 
 st.set_page_config(page_title="Forge Image", page_icon="🖼️")
+with open("designing.css") as source_des:
+    st.markdown(f'<style>{source_des.read()}</style>', unsafe_allow_html=True)
 
 # Function to generate image based on prompt
 def generate_image(prompt_input):
     invoke_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/stable-diffusion-xl"
 
     headers = {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",
         "Accept": "application/json",
     }
 

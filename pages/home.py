@@ -1,7 +1,9 @@
 import streamlit as st
-
-# Set the page title and icon
 st.set_page_config(page_title="Homepage", page_icon="🏠")
+with open("designing.css") as source_des:
+    st.markdown(f'<style>{source_des.read()}</style>', unsafe_allow_html=True)
+# Set the page title and icon
+
 
 # Display the main title of your homepage
 st.title("Welcome to My Project!")

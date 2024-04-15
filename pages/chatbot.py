@@ -2,6 +2,8 @@ import streamlit as st
 import os
 
 st.set_page_config(page_title="Forge Chat", page_icon="💬")
+with open("designing.css") as source_des:
+    st.markdown(f'<style>{source_des.read()}</style>', unsafe_allow_html=True)
 
 st.link_button("Dowload Dummy Dataset", "https://mega.nz/file/6stVECaI#j4ylTiVV6KflAbs60RKmDPxtLFtnO_HNLYnh09_5WN4https://mega.nz/file/6stVECaI#j4ylTiVV6KflAbs60RKmDPxtLFtnO_HNLYnh09_5WN4")
 DOCS_DIR = os.path.abspath("./uploaded_docs")
